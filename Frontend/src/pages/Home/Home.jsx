@@ -82,7 +82,7 @@ function Home() {
         <IntroSection />
 
         {/* About Me */}
-        <AboutMe skills={skills} />
+        <AboutMe skills={skills} darkMode={darkMode}/>
 
         {/* Articles Slider */}
         <ArticlesSlider articles={articles} />

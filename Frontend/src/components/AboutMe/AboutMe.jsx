@@ -4,7 +4,7 @@ import ReactLogo from "../../assets/images/Logos/React.png";
 import TailwindLogo from "../../assets/images/Logos/Tailwind.png";
 import PythonLogo from "../../assets/images/Logos/Python.png";
 
-function AboutMe({ skills }) {
+function AboutMe({ skills, darkMode }) {
   return (
     <>
       <section className="container flex lg:justify-between gap-20 flex-col lg:flex-row items-center ">
@@ -56,6 +56,7 @@ function AboutMe({ skills }) {
               title={skill.title}
               desc={skill.desc}
               img={skill.img}
+              darkMode={darkMode}
             />
           ))}
         </div>
