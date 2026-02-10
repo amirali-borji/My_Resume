@@ -5,6 +5,7 @@ import IntroSection from "../../components/IntroSection/IntroSection";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -82,11 +83,14 @@ function Home() {
         <IntroSection />
 
         {/* About Me */}
-        <AboutMe skills={skills} darkMode={darkMode}/>
+        <AboutMe skills={skills} darkMode={darkMode} />
 
         {/* Articles Slider */}
         <ArticlesSlider articles={articles} />
+
+        {/* Footer */}
       </main>
+      <Footer />
     </div>
   );
 }
