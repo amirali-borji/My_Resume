@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "jserver": "npx json-server --watch data/db.json --port 8000",
+    "js": "npx json-server --watch data/db.json --port 8000",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

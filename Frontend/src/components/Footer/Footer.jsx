@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-200 dark:bg-slate-950 border border-t-slate-300 dark:border-t-slate-600 dark:text-slate-200 border-x-0 mt-24">
+    <footer className="w-full bg-slate-200 dark:bg-slate-950 border border-t-slate-300 dark:border-t-slate-600 dark:text-slate-200 border-x-0 border-b-0 mt-24">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -21,17 +22,17 @@ const Footer = () => {
               </h2>
               <ul className="text-body font-medium space-y-3">
                 <li className="">
-                  <a href="https://flowbite.com/" className="hover:underline">
+                  <Link to={"/"} className="hover:underline">
                     خانه
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link to={"/articles"}
                     href="https://tailwindcss.com/"
                     className="hover:underline"
                   >
                     مقالات
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a

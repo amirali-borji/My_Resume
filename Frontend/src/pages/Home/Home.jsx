@@ -72,13 +72,13 @@ function Home() {
   }, []);
 
   return (
-    <div className="max-w-380 m-auto relative bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white">
+    <div className="">
       {/* Blured Circle */}
       <div className="circle--blured top-[-15%] right-[-20%]"></div>
 
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      <main className="container ">
+      <main className="container space-y-34">
         {/* Intro Section */}
         <IntroSection />
 
@@ -87,9 +87,9 @@ function Home() {
 
         {/* Articles Slider */}
         <ArticlesSlider articles={articles} />
-
-        {/* Footer */}
       </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

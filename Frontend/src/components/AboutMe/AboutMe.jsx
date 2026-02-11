@@ -41,7 +41,7 @@ function AboutMe({ skills, darkMode }) {
       </section>
 
       {/* Skills */}
-      <section className="container relative mt-30">
+      <section className="container relative">
         {/* Blured Circle */}
         <div className="circle--blured  top-[-5%] left-[24%] z-0"></div>
 

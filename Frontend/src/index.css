@@ -113,6 +113,10 @@ body {
       #0f172a 100%
     );
   }
+
+  main {
+    /* @apply mt-21; */
+  }
 }
 
 @custom-variant child (& > *);
