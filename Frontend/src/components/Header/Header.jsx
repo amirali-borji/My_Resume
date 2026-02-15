@@ -133,7 +133,7 @@ function Header({ darkMode, setDarkMode }) {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/2 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         ></div>
 

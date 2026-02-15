@@ -155,7 +155,6 @@ function ArticlesSlider() {
             {visibleArticles.map((article, index) => (
               <div
                 key={`${article.id}-${index}`}
-                className="transform transition-all duration-500 hover:scale-105"
                 style={{
                   animation: `slideIn 0.5s ease-out ${index * 0.1}s both`,
                 }}
