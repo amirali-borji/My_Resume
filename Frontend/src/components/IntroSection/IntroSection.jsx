@@ -25,7 +25,7 @@ function IntroSection() {
         </div>
 
         {/* Picture */}
-        <div className="h-fit w-[70%] lg:w-[40%] pt-5 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
+        <div className="h-fit w-[70%] lg:w-[40%] pt-5 bg-white dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
           <img
             className="mx-auto"
             src="https://rana-resume-demo.vercel.app/demo1/assets/images/my-photo/me.webp"
