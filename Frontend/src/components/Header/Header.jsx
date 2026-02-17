@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "../../Context/ThemeContext.jsx";
 
-function Header({ darkMode, setDarkMode }) {
+function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { darkMode, toggleTheme } = useTheme();
 
   // Handle scroll effect
   useEffect(() => {
@@ -32,7 +34,7 @@ function Header({ darkMode, setDarkMode }) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg"
+            ? "py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl "
             : "py-4 md:py-6 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-xl"
         } border-b border-slate-200 dark:border-slate-700`}
       >
@@ -64,7 +66,7 @@ function Header({ darkMode, setDarkMode }) {
 
               {/* Theme Toggle Button */}
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => toggleTheme()}
                 className="w-10 h-10 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
                 aria-label="تغییر تم"
               >

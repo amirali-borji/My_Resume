@@ -1,27 +1,29 @@
-import React, { useEffect } from "react";
+// App.jsx
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
-import Home from "../src/pages/Home/Home";
-import "./index.css";
+import Home from "./pages/Home/Home";
 import Articles from "./pages/Articles/Articles";
 import Article from "./pages/Article/Article";
+import { ThemeProvider } from "./Context/ThemeContext.jsx";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer.jsx";
+import "./index.css";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 function App() {
+  const [lenisInstance, setLenisInstance] = useState(null);
 
   // Soft Scroll Effect using Lenis
   useEffect(() => {
-    // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smoothTouch: false,
-      touchMultiplier: 2,
     });
 
-    // Animation loop
+    setLenisInstance(lenis);
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -29,18 +31,23 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    // Cleanup on unmount
-    return () => {
-      lenis.destroy();
-    };
+    return () => lenis.destroy();
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/articles" element={<Articles />} />
-      <Route path="/articles/:id" element={<Article />} />
-    </Routes>
+    <ThemeProvider>
+      <Header />
+      {/* Scroll to top on route change */}
+      <ScrollToTop lenis={lenisInstance} />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:id" element={<Article />} />
+      </Routes>
+      
+      <Footer />
+    </ThemeProvider>
   );
 }
 

@@ -1,15 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Header from "../../components/Header/Header";
 import IntroSection from "../../components/IntroSection/IntroSection";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
-import Footer from "../../components/Footer/Footer";
+import { useTheme } from "../../Context/ThemeContext.jsx";
 
 function Home() {
-  const [darkMode, setDarkMode] = useState(false);
   const [skills, setSkills] = useState([]);
+
   const articles = [
     {
       id: 1,
@@ -38,25 +37,6 @@ function Home() {
     },
   ];
 
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedMode);
-    if (savedMode) document.documentElement.classList.add("dark");
-  }, []);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      document.body.classList.remove("bg-slate-50");
-      document.body.classList.add("bg-slate-900");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.body.classList.remove("bg-slate-900");
-      document.body.classList.add("bg-slate-50");
-    }
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
-
   // Get Skills
   useEffect(() => {
     const fetchSkills = async () => {
@@ -76,21 +56,16 @@ function Home() {
       {/* Blured Circle */}
       <div className="circle--blured top-[-15%] right-[-20%]"></div>
 
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-
       <main className="container space-y-34">
         {/* Intro Section */}
         <IntroSection />
 
         {/* About Me */}
-        <AboutMe skills={skills} darkMode={darkMode} />
+        <AboutMe skills={skills} />
 
         {/* Articles Slider */}
         <ArticlesSlider articles={articles} />
       </main>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

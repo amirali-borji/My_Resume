@@ -1,10 +1,10 @@
 import React from "react";
 import SkillCard from "../SkillCard/SkillCard";
-import ReactLogo from "../../assets/images/Logos/React.png";
-import TailwindLogo from "../../assets/images/Logos/Tailwind.png";
-import PythonLogo from "../../assets/images/Logos/Python.png";
+import { useTheme } from "../../Context/ThemeContext.jsx";
 
-function AboutMe({ skills, darkMode }) {
+function AboutMe({ skills }) {
+  const { darkMode, toggleTheme } = useTheme();
+
   return (
     <>
       <section className="container flex lg:justify-between gap-20 flex-col lg:flex-row items-center ">

@@ -6,7 +6,6 @@ import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
 
 function Articles() {
-  const [darkMode, setDarkMode] = useState(false);
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -38,25 +37,6 @@ function Articles() {
     fetchArticles();
   }, []);
 
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedMode);
-    if (savedMode) document.documentElement.classList.add("dark");
-  }, []);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      document.body.classList.remove("bg-slate-50");
-      document.body.classList.add("bg-slate-900");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.body.classList.remove("bg-slate-900");
-      document.body.classList.add("bg-slate-50");
-    }
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
-
   // Filter articles by search
   useEffect(() => {
     if (searchQuery.trim() === "") {
@@ -68,7 +48,7 @@ function Articles() {
           (article.description &&
             article.description
               .toLowerCase()
-              .includes(searchQuery.toLowerCase()))
+              .includes(searchQuery.toLowerCase())),
       );
       setFilteredArticles(filtered);
     }
@@ -76,8 +56,6 @@ function Articles() {
 
   return (
     <div>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-
       <main className="min-h-screen">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
@@ -210,8 +188,6 @@ function Articles() {
           )}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

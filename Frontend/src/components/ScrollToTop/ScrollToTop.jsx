@@ -1,14 +1,17 @@
+// ScrollToTop.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function ScrollToTop() {
+export default function ScrollToTop({ lenis }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true }); // بالا رفتن سریع با Lenis
+    } else {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, [pathname, lenis]);
 
   return null;
 }
-
-export default ScrollToTop;

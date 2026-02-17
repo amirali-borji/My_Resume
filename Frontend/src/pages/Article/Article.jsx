@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import ArticleCard from "../../components/ArticleCard/ArticleCard";
 
 function Article() {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
   const [article, setArticle] = useState(null);
   const [relatedArticles, setRelatedArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,30 +13,11 @@ function Article() {
   const params = useParams();
 
   useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedMode);
-    if (savedMode) document.documentElement.classList.add("dark");
-  }, []);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      document.body.classList.remove("bg-slate-50");
-      document.body.classList.add("bg-slate-900");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.body.classList.remove("bg-slate-900");
-      document.body.classList.add("bg-slate-50");
-    }
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
-
-  useEffect(() => {
     const fetchArticle = async () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:8000/articles/${params.id}`
+          `http://localhost:8000/articles/${params.id}`,
         );
 
         if (!response.ok) {
@@ -52,7 +33,7 @@ function Article() {
           const allArticles = await relatedResponse.json();
           // Filter out current article and get 3 random ones
           const filtered = allArticles.filter(
-            (art) => art.id !== parseInt(params.id)
+            (art) => art.id !== parseInt(params.id),
           );
           const randomArticles = filtered
             .sort(() => 0.5 - Math.random())
@@ -74,7 +55,7 @@ function Article() {
   if (loading) {
     return (
       <div>
-        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Header />
         <main className="container py-20">
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
@@ -91,7 +72,7 @@ function Article() {
   if (error) {
     return (
       <div>
-        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Header />
         <main className="container py-20">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-xl p-8">
@@ -128,8 +109,6 @@ function Article() {
 
   return (
     <div>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-
       <main className="min-h-screen">
         {article && (
           <>
@@ -310,8 +289,6 @@ function Article() {
           </>
         )}
       </main>
-
-      <Footer />
     </div>
   );
 }
