@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import IntroSection from "../../components/IntroSection/IntroSection";
+import Hero from "../../components/Hero/Hero";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
@@ -58,7 +58,7 @@ function Home() {
 
       <main className="container space-y-34">
         {/* Intro Section */}
-        <IntroSection />
+        <Hero />
 
         {/* About Me */}
         <AboutMe skills={skills} />

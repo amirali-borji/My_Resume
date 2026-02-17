@@ -2,9 +2,9 @@ import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import toast, { Toaster } from "react-hot-toast";
 
-function IntroSection() {
+function Hero() {
   return (
-    <section id="introSection" className="z-10 pt-15">
+    <section id="hero" className="z-10 pt-15">
       <div className="flex justify-center items-center lg:justify-between flex-col-reverse lg:flex-row min-h-125 w-auto md:mx-auto">
         {/* Name & Desc & Skills */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-[50%] space-y-8 sm:space-y-10 py-15 font-Morabba-Bold">
@@ -36,4 +36,4 @@ function IntroSection() {
     </section>
   );
 }
-export default IntroSection;
+export default Hero;
