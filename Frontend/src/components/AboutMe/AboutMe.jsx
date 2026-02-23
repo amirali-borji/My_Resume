@@ -7,7 +7,7 @@ function AboutMe({ skills }) {
 
   return (
     <>
-      <section className="container flex lg:justify-between gap-20 flex-col lg:flex-row items-center ">
+      <section className="container flex flex-col items-center gap-20 lg:justify-between lg:flex-row ">
         {/* Image */}
         <div>
           <img
@@ -18,12 +18,12 @@ function AboutMe({ skills }) {
         </div>
 
         {/* Titles & Desc & Skill Cards */}
-        <div className="flex lg:flex-col gap-10">
+        <div className="flex gap-10 lg:flex-col">
           {/* About Me & Desc*/}
           <div className="flex flex-col gap-8">
             {/* Title */}
 
-            <h1 className="flex gap-2 text-4xl sm:text-5xl  md:text-6xl lg:text-7xl">
+            <h1 className="flex gap-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               <span>درباره</span>
               <span className="text-primary">من</span>
             </h1>
@@ -45,11 +45,11 @@ function AboutMe({ skills }) {
         {/* Blured Circle */}
         <div className="circle--blured  top-[-5%] left-[24%] z-0"></div>
 
-        <h1 className="font-Morabba-Bold text-4xl sm:text-5xl   lg:text-6xl ">
+        <h1 className="text-4xl font-Morabba-Bold sm:text-5xl lg:text-6xl ">
           مهارت ها
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2  gap-4 mt-11 bg-transparent ">
+        <div className="grid grid-cols-1 gap-4 bg-transparent lg:grid-cols-2 mt-11 ">
           {skills.map((skill) => (
             <SkillCard
               key={skill.id}

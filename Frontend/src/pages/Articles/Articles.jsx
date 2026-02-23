@@ -58,13 +58,13 @@ function Articles() {
     <div>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
+        <div className="py-16 bg-linear-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-900 md:py-24">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                 مقالات و نوشته‌ها
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
+              <p className="mb-8 text-lg text-gray-600 md:text-xl dark:text-gray-300">
                 جدیدترین مطالب، آموزش‌ها و نکات کاربردی را در اینجا بخوانید
               </p>
 
@@ -76,10 +76,10 @@ function Articles() {
                     placeholder="جستجو در مقالات..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-6 py-4 pr-14 rounded-full bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-400 outline-none text-gray-900 dark:text-white transition-colors"
+                    className="w-full px-6 py-4 text-gray-900 transition-colors bg-white border-2 border-gray-200 rounded-full outline-none pr-14 dark:bg-slate-800 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-400 dark:text-white"
                   />
                   <svg
-                    className="w-6 h-6 absolute right-5 top-1/2 -translate-y-1/2 text-gray-400"
+                    className="absolute w-6 h-6 text-gray-400 -translate-y-1/2 right-5 top-1/2"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ function Articles() {
         <div className="container py-12">
           {/* Articles Count */}
           <div className="mb-8">
-            <p className="text-gray-600 dark:text-gray-400 text-center">
+            <p className="text-center text-gray-600 dark:text-gray-400">
               {filteredArticles.length} مقاله
             </p>
           </div>
@@ -108,7 +108,7 @@ function Articles() {
           {/* Loading State */}
           {loading && (
             <div className="flex flex-col items-center justify-center py-20">
-              <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+              <div className="w-16 h-16 mb-4 border-4 border-blue-500 rounded-full border-t-transparent animate-spin"></div>
               <p className="text-lg text-gray-600 dark:text-gray-400">
                 در حال بارگذاری مقالات...
               </p>
@@ -118,9 +118,9 @@ function Articles() {
           {/* Error State */}
           {error && (
             <div className="max-w-2xl mx-auto">
-              <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-xl p-8 text-center">
+              <div className="p-8 text-center border-2 border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-800 rounded-xl">
                 <svg
-                  className="w-16 h-16 text-red-500 mx-auto mb-4"
+                  className="w-16 h-16 mx-auto mb-4 text-red-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -132,7 +132,7 @@ function Articles() {
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                   />
                 </svg>
-                <h2 className="text-2xl font-bold text-red-700 dark:text-red-400 mb-2">
+                <h2 className="mb-2 text-2xl font-bold text-red-700 dark:text-red-400">
                   خطا در بارگذاری
                 </h2>
                 <p className="text-red-600 dark:text-red-300">{error}</p>
@@ -142,9 +142,9 @@ function Articles() {
 
           {/* No Results */}
           {!loading && !error && filteredArticles.length === 0 && (
-            <div className="text-center py-20">
+            <div className="py-20 text-center">
               <svg
-                className="w-24 h-24 text-gray-300 dark:text-gray-600 mx-auto mb-4"
+                className="w-24 h-24 mx-auto mb-4 text-gray-300 dark:text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -156,15 +156,15 @@ function Articles() {
                   d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
                 مقاله‌ای یافت نشد
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="mb-6 text-gray-600 dark:text-gray-400">
                 متأسفانه مقاله‌ای با این جستجو پیدا نشد.
               </p>
               <button
                 onClick={() => setSearchQuery("")}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                className="px-6 py-3 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600"
               >
                 نمایش همه مقالات
               </button>
@@ -173,7 +173,7 @@ function Articles() {
 
           {/* Articles Grid */}
           {!loading && !error && filteredArticles.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {filteredArticles.map((article) => (
                 <Link key={article.id} to={`/articles/${article.id}`}>
                   <ArticleCard
