@@ -17,8 +17,8 @@ function Articles() {
     const fetchArticles = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8000/articles");
-
+      const response = await fetch("http://localhost:8000/articles");
+  
         if (!response.ok) {
           throw new Error("خطا در دریافت مقالات");
         }
