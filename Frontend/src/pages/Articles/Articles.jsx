@@ -17,8 +17,8 @@ function Articles() {
     const fetchArticles = async () => {
       try {
         setLoading(true);
-      const response = await fetch("http://localhost:8000/articles");
-  
+        const response = await fetch("http://localhost:8000/articles");
+
         if (!response.ok) {
           throw new Error("خطا در دریافت مقالات");
         }
@@ -58,7 +58,7 @@ function Articles() {
     <div>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <div className="py-16 bg-linear-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-900 md:py-24">
+        <div className="py-16 bg-linear-to-t from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 md:py-24">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
@@ -180,6 +180,8 @@ function Articles() {
                     title={article.title}
                     desc={article.description || article.excerpt}
                     img={article.image || article.img}
+                    readTime={article.readTime}
+                    author={article.author}
                     fullWidth={true}
                   />
                 </Link>
@@ -187,6 +189,7 @@ function Articles() {
             </div>
           )}
         </div>
+        <div className="py-16 bg-linear-to-b from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 md:py-24`"></div>
       </main>
     </div>
   );

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-slate-200 dark:bg-slate-950 border border-t-slate-300 dark:border-t-slate-600 dark:text-slate-200 border-x-0 border-b-0 mt-24">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer className="w-full bg-slate-200 dark:bg-slate-950 border border-t-slate-300 dark:border-t-slate-600 dark:text-slate-200 border-x-0 border-b-0">
+      <div className="mx-auto w-full max-w-7x p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
@@ -27,7 +27,8 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/articles"}
+                  <Link
+                    to={"/articles"}
                     href="https://tailwindcss.com/"
                     className="hover:underline"
                   >
@@ -76,11 +77,9 @@ const Footer = () => {
 
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-body sm:text-center">
-            © 2026{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              Amirali Borji
+            <a href="#" className="hover:underline">
+              💙 Built pixel by pixel by Amirali
             </a>
-            . All Rights Reserved.
           </span>
 
           <div className="flex mt-4 sm:justify-center sm:mt-0">

@@ -18,10 +18,14 @@ function Hero() {
             توسعه‌دهنده قالب‌های شخصی و رزومه‌محور با تمرکز بر طراحی مدرن،
             ریسپانسیو و تجربه کاربری حرفه‌ای.
           </p>
-          <button className="flex items-center gap-2 rounded-2xl text-[18px] py-2 px-10 bg-primary hover:bg-blue-600 cursor-pointer text-white font-Dana-Medium transition-colors">
+          <a
+            href="/Frontend/data/db.json"
+            download
+            className="flex items-center gap-2 rounded-2xl text-[18px] py-2 px-10 bg-primary hover:bg-blue-600 cursor-pointer text-white font-Dana-Medium transition-colors"
+          >
             دانلود رزومه‌
             <FaDownload />
-          </button>
+          </a>
         </div>
 
         {/* Picture */}

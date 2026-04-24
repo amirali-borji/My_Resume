@@ -7,7 +7,7 @@ export default function ScrollToTop({ lenis }) {
 
   useEffect(() => {
     if (lenis) {
-      lenis.scrollTo(0, { immediate: true }); // بالا رفتن سریع با Lenis
+      lenis.scrollTo(0); // بالا رفتن سریع با Lenis
     } else {
       window.scrollTo({ top: 0, behavior: "auto" });
     }

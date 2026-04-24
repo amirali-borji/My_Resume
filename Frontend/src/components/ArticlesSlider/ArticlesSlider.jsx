@@ -3,7 +3,7 @@ import ArticleCard from "../ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-function ArticlesSlider() {
+function ArticlesSlider({}) {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,6 +11,9 @@ function ArticlesSlider() {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const sliderRef = useRef(null);
   const autoPlayRef = useRef(null);
+
+  console.log(articles);
+  
 
   // Get Articles
   useEffect(() => {
@@ -164,6 +167,8 @@ function ArticlesSlider() {
                     title={article.title}
                     desc={article.description || article.excerpt}
                     img={article.image || article.img}
+                    readTime={article.readTime}
+                    author={article.author}
                     fullWidth={true}
                   />
                 </Link>
