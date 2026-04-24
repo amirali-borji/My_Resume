@@ -1,8 +1,11 @@
 import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import toast, { Toaster } from "react-hot-toast";
+import TypingEffect from "../TypingEffect/TypingEffect";
 
 function Hero() {
+  const skills = ["بازاریابی", "طراحی رابط گرافیکی", "فرانت اند", "پایتون"];
+
   return (
     <section id="hero" className="z-10 pt-15">
       <div className="flex justify-center items-center lg:justify-between flex-col-reverse lg:flex-row min-h-125 w-auto md:mx-auto">
@@ -12,7 +15,11 @@ function Hero() {
             من علی محمدی هستم
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-blue-500 ">
-            طراح رابط کاربری
+            <TypingEffect
+              skills={skills}
+              typingSpeed={100}
+              pauseDuration={2000}
+            />
           </h2>
           <p className="max-w-[80%] text-xl md:text-2xl lg:text-xl text-slate-400 dark:text-slate-500 font-Dana-Regular">
             توسعه‌دهنده قالب‌های شخصی و رزومه‌محور با تمرکز بر طراحی مدرن،
