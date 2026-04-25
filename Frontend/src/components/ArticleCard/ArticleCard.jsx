@@ -6,7 +6,7 @@ function ArticleCard({ title, desc, img, readTime, author, fullWidth }) {
       <div
         className={`${
           fullWidth ? "w-full" : "w-66 md:w-76 lg:w-96"
-        } h-108  p-6 rounded-2xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 hover:dark:bg-slate-700 transform transition-all duration-500 hover:scale-105`}
+        } h-108  p-6 rounded-2xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 hover:dark:bg-slate-700 transform transition-all duration-500 `}
       >
         {/* Card Img */}
         <div className="object-cover w-full h-48 overflow-hidden rounded-2xl">
@@ -23,6 +23,7 @@ function ArticleCard({ title, desc, img, readTime, author, fullWidth }) {
           </div>
           {/* Meta Information */}
           <div className="flex gap-3 text-[12px] md:text-base text-gray-600 dark:text-gray-400 mt-5">
+            
             <span className="flex items-end md:items-center gap-1">
               <svg
                 className="w-5 h-5"
