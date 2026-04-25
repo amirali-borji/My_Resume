@@ -43,7 +43,7 @@ function AboutMe({ skills }) {
       {/* Skills */}
       <section className="container relative">
         {/* Blured Circle */}
-        <div className="circle--blured  top-[-5%] left-[24%] z-0"></div>
+        <div className="circle--blured  top-[-5%] left-[20%] z-0"></div>
 
         <h1 className="text-4xl font-Morabba-Bold sm:text-5xl lg:text-6xl ">
           مهارت ها
