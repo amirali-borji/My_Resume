@@ -33,7 +33,7 @@ function Home() {
         <Hero />
 
         {/* About Me */}
-        <AboutMe  />
+        <AboutMe />
 
         {/* Articles Slider */}
         <ArticlesSlider />

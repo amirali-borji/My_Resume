@@ -1,24 +1,21 @@
 import React from "react";
 import SkillCard from "../SkillCard/SkillCard";
 import { useTheme } from "../../Context/ThemeContext.jsx";
+import groupImg from "../../assets/images/Group 62.svg";
 
 function AboutMe({}) {
-  const { darkMode, toggleTheme } = useTheme();
+  const { darkMode } = useTheme();
 
   return (
     <>
       <section className="container flex flex-col items-center gap-20 lg:justify-between lg:flex-row ">
         {/* Image */}
-        <div>
-          <img
-            className="lg:w-400"
-            src="/src/assets/images/Group 62.svg"
-            alt=""
-          />
+        <div className="w-full lg:w-1/2 shrink-0">
+          <img className="w-full max-w-[400px] mx-auto" src={groupImg} alt="" />
         </div>
 
         {/* Titles & Desc & Skill Cards */}
-        <div className="flex gap-10 lg:flex-col">
+        <div className="flex gap-10 lg:flex-col min-w-0">
           {/* About Me & Desc*/}
           <div className="flex flex-col gap-8">
             {/* Title */}
