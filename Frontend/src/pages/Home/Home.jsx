@@ -7,21 +7,21 @@ import axios from "axios";
 import { useTheme } from "../../Context/ThemeContext.jsx";
 
 function Home() {
-  const [skills, setSkills] = useState([]);
+  // const [skills, setSkills] = useState([]);
 
   // Get Skills
-  useEffect(() => {
-    const fetchSkills = async () => {
-      try {
-        const res = await axios.get("http://localhost:8000/skills");
-        setSkills(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchSkills = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:8000/skills");
+  //       setSkills(res.data);
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
 
-    fetchSkills();
-  }, []);
+  //   fetchSkills();
+  // }, []);
 
   return (
     <div className="">
@@ -33,7 +33,7 @@ function Home() {
         <Hero />
 
         {/* About Me */}
-        <AboutMe skills={skills} />
+        <AboutMe  />
 
         {/* Articles Slider */}
         <ArticlesSlider />

@@ -2,7 +2,7 @@ import React from "react";
 import SkillCard from "../SkillCard/SkillCard";
 import { useTheme } from "../../Context/ThemeContext.jsx";
 
-function AboutMe({ skills }) {
+function AboutMe({}) {
   const { darkMode, toggleTheme } = useTheme();
 
   return (
@@ -50,7 +50,7 @@ function AboutMe({ skills }) {
         </h1>
 
         <div className="grid grid-cols-1 gap-4 bg-transparent lg:grid-cols-2 mt-11 ">
-          {skills.map((skill) => (
+          {/* {skills.map((skill) => (
             <SkillCard
               key={skill.id}
               title={skill.title}
@@ -58,7 +58,43 @@ function AboutMe({ skills }) {
               img={skill.img}
               darkMode={darkMode}
             />
-          ))}
+          ))} */}
+          <SkillCard
+            key={1}
+            title={"JavaScript"}
+            desc={"Front-end language"}
+            img={
+              "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            }
+            darkMode={darkMode}
+          />
+          <SkillCard
+            key={2}
+            title={"Python"}
+            desc={"Back-end and AI"}
+            img={
+              "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+            }
+            darkMode={darkMode}
+          />
+          <SkillCard
+            key={3}
+            title={"React"}
+            desc={"Frontend framework"}
+            img={
+              "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+            }
+            darkMode={darkMode}
+          />
+          <SkillCard
+            key={4}
+            title={"Node.js"}
+            desc={"Backend runtime"}
+            img={
+              "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+            }
+            darkMode={darkMode}
+          />
         </div>
       </section>
     </>
