@@ -17,14 +17,14 @@ function Articles() {
     const fetchArticles = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8000/articles");
+        const response = await fetch(`${import.meta.env.BASE_URL}data/db.json`);
 
         if (!response.ok) {
           throw new Error("خطا در دریافت مقالات");
         }
 
         const data = await response.json();
-        setArticles(data);
+        setArticles(data.articles);
         setFilteredArticles(data);
       } catch (err) {
         setError(err.message);

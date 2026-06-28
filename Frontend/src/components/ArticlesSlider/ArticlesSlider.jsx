@@ -12,22 +12,19 @@ function ArticlesSlider({}) {
   const sliderRef = useRef(null);
   const autoPlayRef = useRef(null);
 
-  console.log(articles);
-  
-
   // Get Articles
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8000/articles");
+        const response = await fetch(`${import.meta.env.BASE_URL}data/db.json`);
 
         if (!response.ok) {
           throw new Error("خطا در دریافت مقالات");
         }
 
         const data = await response.json();
-        setArticles(data);
+        setArticles(data.articles);
       } catch (err) {
         setError(err.message);
         console.error("Error fetching articles:", err);
