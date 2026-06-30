@@ -5,6 +5,7 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
 import { useTheme } from "../../Context/ThemeContext.jsx";
+import Portfolio from "../../components/Portfolio/Portfolio.jsx";
 
 function Home() {
   // const [skills, setSkills] = useState([]);
@@ -34,6 +35,9 @@ function Home() {
 
         {/* About Me */}
         <AboutMe />
+
+        {/* Portfolio */}
+        <Portfolio />
 
         {/* Articles Slider */}
         <ArticlesSlider />
