@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer.jsx";
 import "./index.css";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+import WorkDetail from "./pages/WorkDetail/WorkDetail.jsx";
 
 function App() {
   const [lenisInstance, setLenisInstance] = useState(null);
@@ -44,6 +45,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:id" element={<Article />} />
+        <Route path="/portfolio/:slug" element={<WorkDetail />} />
       </Routes>
 
       <Footer />
