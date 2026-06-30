@@ -12,7 +12,7 @@ function Hero() {
         {/* Name & Desc & Skills */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-[50%] space-y-8 sm:space-y-10 py-15 font-Morabba-Bold">
           <h1 className="text-3xl md:text-5xl lg:text-6xl">
-            من علی محمدی هستم
+            من امیرعلی خلیلی هستم
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-blue-500 ">
             <TypingEffect
@@ -36,10 +36,10 @@ function Hero() {
         </div>
 
         {/* Picture */}
-        <div className="h-fit w-[70%] lg:w-[40%] pt-5 bg-white dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
+        <div className="h-fit w-[70%] lg:w-[40%] pt-2 bg-white dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
           <img
-            className="mx-auto"
-            src="https://rana-resume-demo.vercel.app/demo1/assets/images/my-photo/me.webp"
+            className="  w-full rounded-4xl"
+            src="https://dl.aminghadim.com/main/IMG_20260615_001105_602.webp"
             alt=""
           />
         </div>
