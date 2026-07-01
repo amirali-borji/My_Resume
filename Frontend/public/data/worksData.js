@@ -9,6 +9,13 @@ import ChandRasanehPic7 from "../../src/assets/images/ChandRasaneh/pic7.jpg";
 import ChandRasanehPic8 from "../../src/assets/images/ChandRasaneh/pic8.jpg";
 import ChandRasanehPic9 from "../../src/assets/images/ChandRasaneh/pic9.jpg";
 
+
+
+import ChandRasanehConver2 from "../../src/assets/images/Portfolio/image.png";
+import ChandRasanehConver3 from "../../src/assets/images/Portfolio/basig-ansar.ir_.png";
+
+
+
 // data/worksData.js
 const works = {
   religious: [
@@ -35,8 +42,8 @@ const works = {
       id: 2,
       slug: "heyat-site",
       title: "سایت هیئت مذهبی",
-      desc: "طراحی سایت اطلاع‌رسانی برنامه‌ها و پخش زنده مراسم مذهبی.",
-      cover: "/images/work-heyat.jpg",
+      desc: "طراحی سایت اطلاع‌رسانی برنامه‌ها و پخش زنده هیئت الرضا.",
+      cover: ChandRasanehConver2,
       gallery: [
         "/images/work-heyat-1.jpg",
         "/images/work-heyat-2.jpg",
@@ -47,9 +54,9 @@ const works = {
     {
       id: 3,
       slug: "dua-app",
-      title: "اپلیکیشن دعا و زیارت",
-      desc: "رابط کاربری اپلیکیشن متون دعا با قابلیت جست‌وجو و بوکمارک.",
-      cover: "/images/work-dua.jpg",
+      title: "اپلیکیشن مدیریت منابع انسانی",
+      desc: "سایت مدریت و تقسیم کار انصار.",
+      cover: ChandRasanehConver3,
       gallery: ["/images/work-dua-1.jpg", "/images/work-dua-2.jpg"],
       liveUrl: "https://example.com",
     },

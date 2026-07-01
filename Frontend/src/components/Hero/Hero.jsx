@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import TypingEffect from "../TypingEffect/TypingEffect";
 
 function Hero() {
-  const skills = ["بازاریابی", "طراحی رابط گرافیکی", "فرانت اند", "پایتون"];
+  const skills = ["طراح اپلیکیشن", "طراح سایت", "سئو", "تمامی خدمات مربوط به سایت"];
 
   return (
     <section id="hero" className="z-10 pt-15">
@@ -22,8 +22,9 @@ function Hero() {
             />
           </h2>
           <p className="max-w-[80%] text-xl md:text-2xl lg:text-xl text-slate-400 dark:text-slate-500 font-Dana-Regular">
-            توسعه‌دهنده قالب‌های شخصی و رزومه‌محور با تمرکز بر طراحی مدرن،
-            ریسپانسیو و تجربه کاربری حرفه‌ای.
+        برنامه نویس اپلیکشن و طراح سایت  با تمرکز بر طراحی مدرن، ریسپانسیو و تجربه کاربری حرفه‌ای.
+
+
           </p>
           <a
             href="/Frontend/data/db.json"

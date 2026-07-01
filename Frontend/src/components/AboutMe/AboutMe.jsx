@@ -27,10 +27,7 @@ function AboutMe({}) {
             {/* Desc */}
             <div className="text-[14px] lg:text-[18px] text-secondary-light dark:text-secondary-dark">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
-                deleniti ipsam? Dolorem nemo repudiandae quod iusto harum?
-                Ratione sed dolorem cum molestias amet! Culpa nostrum, itaque
-                quia molestiae iste vero.
+              توسعه‌دهنده بک‌اند با تجربه در طراحی، توسعه و نگهداری سرویس‌ها و APIهای مقیاس‌پذیر و قابل اعتماد. مسلط به اصول توسعه نرم‌افزار، نوشتن کدهای تمیز و قابل نگهداری و علاقه‌مند به ارائه راهکارهای بهینه برای حل چالش‌های فنی. دارای روحیه یادگیری مستمر، توانایی کار تیمی و اشتیاق به استفاده از فناوری‌های روز برای توسعه نرم‌افزارهای باکیفیت و کارآمد
               </p>
             </div>
           </div>
