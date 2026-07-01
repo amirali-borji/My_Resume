@@ -1,6 +1,6 @@
 import React from "react";
 
-function WorkCard({ title, desc, img }) {
+function PortfolioCard({ title, desc, img }) {
   return (
     <div className="cursor-pointer">
       <div
@@ -25,4 +25,4 @@ function WorkCard({ title, desc, img }) {
   );
 }
 
-export default WorkCard;
+export default PortfolioCard;

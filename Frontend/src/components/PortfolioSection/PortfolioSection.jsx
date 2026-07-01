@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import works from "../../../public/data/worksData";
 
-function Portfolio() {
+function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState("religious");
   const activeWorks = works[activeCategory] || [];
 
@@ -67,4 +67,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default PortfolioSection;

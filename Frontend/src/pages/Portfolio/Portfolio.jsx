@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import works from "../../../public/data/worksData";
-import WorkCard from "../../components/WorkCard/WorkCard";
+import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 
 function Portfolio() {
   const allWorks = Object.values(works).flat();
@@ -36,7 +36,7 @@ function Portfolio() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {allWorks.map((work) => (
               <Link key={work.id} to={`/portfolio/${work.slug}`}>
-                <WorkCard
+                <PortfolioCard
                   title={work.title}
                   desc={work.desc}
                   img={work.cover}

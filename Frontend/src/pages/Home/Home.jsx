@@ -6,7 +6,7 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
 import { useTheme } from "../../Context/ThemeContext.jsx";
-import Portfolio from "../../components/Portfolio/Portfolio.jsx";
+import PortfolioSection from "../../components/PortfolioSection/PortfolioSection.jsx";
 
 function Home() {
   const location = useLocation();
@@ -43,7 +43,7 @@ function Home() {
 
         {/* Portfolio */}
         <div id="portfolio" className="scroll-mt-24">
-          <Portfolio />
+          <PortfolioSection />
         </div>
 
         {/* About Me */}
