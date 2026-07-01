@@ -36,7 +36,7 @@ function Hero() {
         </div>
 
         {/* Picture */}
-        <div className="h-fit w-[70%] lg:w-[40%] pt-2 bg-white dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
+        <div className="h-fit w-[70%] lg:w-[40%] pt-2 bg-primary dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
           <img
             className="  w-full rounded-4xl"
             src="https://dl.aminghadim.com/main/IMG_20260615_001105_602.webp"
