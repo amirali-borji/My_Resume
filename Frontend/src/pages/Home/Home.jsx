@@ -41,13 +41,13 @@ function Home() {
         {/* Intro Section */}
         <Hero />
 
-        {/* About Me */}
-        <AboutMe />
-
         {/* Portfolio */}
         <div id="portfolio" className="scroll-mt-24">
           <Portfolio />
         </div>
+
+        {/* About Me */}
+        <AboutMe />
 
         {/* Articles Slider */}
         <ArticlesSlider />
