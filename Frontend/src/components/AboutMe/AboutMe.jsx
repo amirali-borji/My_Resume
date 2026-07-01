@@ -20,12 +20,12 @@ function AboutMe({}) {
           <div className="flex flex-col gap-8">
             {/* Title */}
 
-            <h1 className="flex gap-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="flex gap-2 font-Morabba-Bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               <span>درباره</span>
               <span className="text-primary">من</span>
             </h1>
             {/* Desc */}
-            <div className="text-[14px] lg:text-[18px] text-secondary-light dark:text-secondary-dark">
+            <div className="text-[14px] font-Dana-Medium lg:text-[18px] text-secondary-light dark:text-secondary-dark">
               <p>
               توسعه‌دهنده بک‌اند با تجربه در طراحی، توسعه و نگهداری سرویس‌ها و APIهای مقیاس‌پذیر و قابل اعتماد. مسلط به اصول توسعه نرم‌افزار، نوشتن کدهای تمیز و قابل نگهداری و علاقه‌مند به ارائه راهکارهای بهینه برای حل چالش‌های فنی. دارای روحیه یادگیری مستمر، توانایی کار تیمی و اشتیاق به استفاده از فناوری‌های روز برای توسعه نرم‌افزارهای باکیفیت و کارآمد
               </p>
