@@ -12,7 +12,7 @@ function Portfolio() {
       <div className="pt-16 md:pt-24 bg-linear-to-t from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            <h1 className="mb-6 text-4xl font-Morabba-Bold  text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
               نمونه کارها
             </h1>
 
