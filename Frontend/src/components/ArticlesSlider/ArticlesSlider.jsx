@@ -68,7 +68,7 @@ function ArticlesSlider({}) {
     if (articles.length === 0) return [];
 
     const visible = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 1; i++) {
       const index = (currentIndex + i) % articles.length;
       visible.push(articles[index]);
     }
@@ -151,7 +151,7 @@ function ArticlesSlider({}) {
           </button>
 
           {/* Articles Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
             {visibleArticles.map((article, index) => (
               <div
                 key={`${article.id}-${index}`}
