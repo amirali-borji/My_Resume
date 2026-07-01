@@ -9,29 +9,6 @@ import { useTheme } from "../../Context/ThemeContext.jsx";
 import PortfolioSection from "../../components/PortfolioSection/PortfolioSection.jsx";
 
 function Home() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (!location.hash) return;
-
-    let attempts = 0;
-    const maxAttempts = 30;
-
-    const tryScroll = () => {
-      const el = document.querySelector(location.hash);
-      attempts++;
-
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      } else if (attempts < maxAttempts) {
-        setTimeout(tryScroll, 100);
-      }
-    };
-
-    const timer = setTimeout(tryScroll, 100);
-    return () => clearTimeout(timer);
-  }, [location]);
-
   return (
     <div className="">
       {/* Blured Circle */}
@@ -42,9 +19,7 @@ function Home() {
         <Hero />
 
         {/* Portfolio */}
-        <div id="portfolio" className="scroll-mt-24">
-          <PortfolioSection />
-        </div>
+        <PortfolioSection />
 
         {/* About Me */}
         <AboutMe />
