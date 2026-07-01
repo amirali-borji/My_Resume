@@ -3,7 +3,7 @@ import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../Context/ThemeContext.jsx";
 
-function Header() {
+function Header({}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -96,7 +96,7 @@ function Header() {
             <div className="md:hidden flex items-center gap-3">
               {/* Theme Toggle */}
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => toggleTheme()}
                 className="w-10 h-10 rounded-full bg-gray-100 dark:bg-slate-800 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
                 aria-label="تغییر تم"
               >
