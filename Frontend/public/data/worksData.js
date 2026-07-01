@@ -1,7 +1,13 @@
-import ChandRasanehConver from "../../src/assets/images/Portfolio/1.jpg"
-
-
-
+import ChandRasanehConver from "../../src/assets/images/Portfolio/1.jpg";
+import ChandRasanehPic1 from "../../src/assets/images/ChandRasaneh/pic1.jpg";
+import ChandRasanehPic2 from "../../src/assets/images/ChandRasaneh/pic2.jpg";
+import ChandRasanehPic3 from "../../src/assets/images/ChandRasaneh/pic3.jpg";
+import ChandRasanehPic4 from "../../src/assets/images/ChandRasaneh/pic4.jpg";
+import ChandRasanehPic5 from "../../src/assets/images/ChandRasaneh/pic5.jpg";
+import ChandRasanehPic6 from "../../src/assets/images/ChandRasaneh/pic6.jpg";
+import ChandRasanehPic7 from "../../src/assets/images/ChandRasaneh/pic7.jpg";
+import ChandRasanehPic8 from "../../src/assets/images/ChandRasaneh/pic8.jpg";
+import ChandRasanehPic9 from "../../src/assets/images/ChandRasaneh/pic9.jpg";
 
 // data/worksData.js
 const works = {
@@ -13,10 +19,15 @@ const works = {
       desc: "وبسایت امین قدیم برای حفظ و ترویج آثار ایشان",
       cover: ChandRasanehConver,
       gallery: [
-        "/images/work-quran-1.jpg",
-        "/images/work-quran-2.jpg",
-        "/images/work-quran-3.jpg",
-        "/images/work-quran-4.jpg",
+        ChandRasanehPic1,
+        ChandRasanehPic2,
+        ChandRasanehPic3,
+        ChandRasanehPic4,
+        ChandRasanehPic5,
+        ChandRasanehPic6,
+        ChandRasanehPic7,
+        ChandRasanehPic8,
+        ChandRasanehPic9,
       ],
       liveUrl: "https://aminghadim.com",
     },

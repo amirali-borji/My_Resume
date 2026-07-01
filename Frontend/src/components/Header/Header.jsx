@@ -27,6 +27,7 @@ function Header({}) {
   const navLinks = [
     { name: "خانه", path: "/" },
     { name: "مقالات", path: "/articles" },
+    { name: "نمونه کارها", path: "/#portfolio" },
   ];
 
   return (

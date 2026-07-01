@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Hero from "../../components/Hero/Hero";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
@@ -8,21 +9,28 @@ import { useTheme } from "../../Context/ThemeContext.jsx";
 import Portfolio from "../../components/Portfolio/Portfolio.jsx";
 
 function Home() {
-  // const [skills, setSkills] = useState([]);
+  const location = useLocation();
 
-  // Get Skills
-  // useEffect(() => {
-  //   const fetchSkills = async () => {
-  //     try {
-  //       const res = await axios.get("http://localhost:8000/skills");
-  //       setSkills(res.data);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
+  useEffect(() => {
+    if (!location.hash) return;
 
-  //   fetchSkills();
-  // }, []);
+    let attempts = 0;
+    const maxAttempts = 30; // حداکثر 30 * 100ms = 3 ثانیه صبر می‌کنیم
+
+    const tryScroll = () => {
+      const el = document.querySelector(location.hash);
+      attempts++;
+
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else if (attempts < maxAttempts) {
+        setTimeout(tryScroll, 100);
+      }
+    };
+
+    const timer = setTimeout(tryScroll, 100);
+    return () => clearTimeout(timer);
+  }, [location]);
 
   return (
     <div className="">
@@ -37,7 +45,9 @@ function Home() {
         <AboutMe />
 
         {/* Portfolio */}
-        <Portfolio />
+        <div id="portfolio" className="scroll-mt-24">
+          <Portfolio />
+        </div>
 
         {/* Articles Slider */}
         <ArticlesSlider />
