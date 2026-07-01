@@ -15,7 +15,7 @@ function Home() {
     if (!location.hash) return;
 
     let attempts = 0;
-    const maxAttempts = 30; // حداکثر 30 * 100ms = 3 ثانیه صبر می‌کنیم
+    const maxAttempts = 30;
 
     const tryScroll = () => {
       const el = document.querySelector(location.hash);
