@@ -53,8 +53,10 @@
   --shadow-normal: 0px 1px 10px rgba(0, 0, 0, 0.05);
 }
 
+html,
 body {
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 @utility container {

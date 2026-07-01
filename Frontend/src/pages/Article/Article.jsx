@@ -16,30 +16,33 @@ function Article() {
     const fetchArticle = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `http://localhost:8000/articles/${params.id}`,
-        );
+        const response = await fetch(`${import.meta.env.BASE_URL}data/db.json`);
 
         if (!response.ok) {
           throw new Error("مقاله یافت نشد");
         }
 
         const data = await response.json();
-        setArticle(data);
+        const allArticles = data.articles;
 
-        // Fetch related articles (all articles except current one)
-        const relatedResponse = await fetch("http://localhost:8000/articles");
-        if (relatedResponse.ok) {
-          const allArticles = await relatedResponse.json();
-          // Filter out current article and get 3 random ones
-          const filtered = allArticles.filter(
-            (art) => art.id !== parseInt(params.id),
-          );
-          const randomArticles = filtered
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
-          setRelatedArticles(randomArticles);
+        const foundArticle = allArticles.find(
+          (art) => art.id === parseInt(params.id),
+        );
+
+        if (!foundArticle) {
+          throw new Error("مقاله یافت نشد");
         }
+
+        setArticle(foundArticle);
+
+        // Related articles: بقیه مقالات به جز مقاله جاری
+        const filtered = allArticles.filter(
+          (art) => art.id !== parseInt(params.id),
+        );
+        const randomArticles = filtered
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3);
+        setRelatedArticles(randomArticles);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -274,12 +277,11 @@ function Article() {
                   </h2>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {relatedArticles.map((relatedArticle) => (
-                      <Link to={`/articles/${relatedArticle.id}`}>
-                        <ArticleCard
-                          key={relatedArticle.id}
-                          {...relatedArticle}
-                          fullWidth={true}
-                        />
+                      <Link
+                        key={relatedArticle.id}
+                        to={`/articles/${relatedArticle.id}`}
+                      >
+                        <ArticleCard {...relatedArticle} fullWidth={true} />
                       </Link>
                     ))}
                   </div>
